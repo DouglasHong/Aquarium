@@ -28,7 +28,7 @@ public class AquariumDemo {
         aquarium.setYear(2014);
         gravel.setColor(gravelcolor);
         fish.setColor(fishcolor);
-        fish.setQuantity("5 fish");
+        fish.setQuantity(5);
         coral.setQuantity("10 coral");
 
         aquarium.setGravel(gravel);
@@ -38,10 +38,10 @@ public class AquariumDemo {
         Color[] gc = aquarium.getGravel().getColor();
         Color[] fc = aquarium.getFish().getColor();
 
-        System.out.println("The aqaurium has " + gc[0].getColor() + " , "
-                + aquarium.getFish().getQuantity() + "," + fc[0].getColor()
-                + "," + aquarium.getCoral().getQuantity() + ","
-                + " the color of the aquarium is " + " and the aqaurium built in "
+        System.out.println("The aqaurium has " + gc[0].getColor() + ", "
+                + aquarium.getFish().getQuantity() + " " + fc[0].getColor()
+                + ", " + aquarium.getCoral().getQuantity() + ", "
+                + "and the aquarium was built in "
                 + aquarium.getYear());
         Aquarium[] aqs1 = createAquarium(3, 2);
 
@@ -61,7 +61,7 @@ public class AquariumDemo {
 
             Fish f = aq.getFish();
             String fs = f.getFish();
-            String fq = f.getQuantity();
+            int fq = f.getQuantity();
             Color[] fc = f.getColor();
             for (int z = 0; z < fc.length; z++) {
                 Color fo = fc[z];
@@ -105,7 +105,7 @@ public class AquariumDemo {
     private static Fish createFish(int i, int cN) {
         Fish f = new Fish();
         f.setFish("Goldfish " + i);
-        f.setQuantity("10 " + i);
+        f.setQuantity(10 + i);
         Color fc[] = new Color[cN];
         for (int d = 0; d < fc.length; d++) {
             Color fic = new Color();
