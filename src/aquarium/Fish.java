@@ -12,7 +12,7 @@ package aquarium;
 public class Fish {
 
     private String fish;
-    private String quantity;
+    private int quantity;
     private Color color[];
 
     /**
@@ -32,14 +32,14 @@ public class Fish {
     /**
      * @return the quantity
      */
-    public String getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
     /**
      * @param quantity the quantity to set
      */
-    public void setQuantity(String quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
